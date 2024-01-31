@@ -30,7 +30,6 @@ export default function Home() {
     };
   }, [quacks, nuts, gourdons]);
 
-  // let audio = new Audio("/sounds/quack.mp3")
   const [audio] = useState<HTMLAudioElement | null>(typeof Audio !== 'undefined' ? new Audio("/sounds/quack.mp3") : null)
   const handleClick = (event: any) => {
     audio?.play();
@@ -76,6 +75,7 @@ export default function Home() {
     }
   }
 
+  console.log(quantity)
   return (
     <div className="flex h-[95vh] border-2 border-stone-700">
       <div id='ducks' className="w-1/4 flex flex-col justify-center items-center border-r-2 border-stone-700">
@@ -87,11 +87,11 @@ export default function Home() {
       <div className="flex flex-col gap-10 w-3/4 items-start p-5">
         <div className="flex gap-3 items-center">
           <p className="text-lg text-stone-400">Buy</p>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 1 && 'bg-stone-300'}`} onClick={() => setQuantity(1)}>1</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 10 && 'bg-stone-300'}`} onClick={() => setQuantity(10)}>10</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 25 && 'bg-stone-300'}`} onClick={() => setQuantity(25)}>25</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 50 && 'bg-stone-300'}`} onClick={() => setQuantity(50)}>50</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 100 && 'bg-stone-300'}`} onClick={() => setQuantity(100)}>100</button>
+          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 1 && 'bg-stone-400'}`} onClick={() => setQuantity(1)}>1</button>
+          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 10 && 'bg-stone-400'}`} onClick={() => setQuantity(10)}>10</button>
+          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 25 && 'bg-stone-400'}`} onClick={() => setQuantity(25)}>25</button>
+          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 50 && 'bg-stone-400'}`} onClick={() => setQuantity(50)}>50</button>
+          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 100 && 'bg-stone-400'}`} onClick={() => setQuantity(100)}>100</button>
         </div>
 
         <div className="flex flex-wrap gap-5">
