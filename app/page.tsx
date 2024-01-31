@@ -87,11 +87,11 @@ export default function Home() {
       <div className="flex flex-col gap-10 w-3/4 items-start p-5">
         <div className="flex gap-3 items-center">
           <p className="text-lg text-stone-400">Buy</p>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 1 && 'bg-stone-400'}`} onClick={() => setQuantity(1)}>1</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 10 && 'bg-stone-400'}`} onClick={() => setQuantity(10)}>10</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 25 && 'bg-stone-400'}`} onClick={() => setQuantity(25)}>25</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 50 && 'bg-stone-400'}`} onClick={() => setQuantity(50)}>50</button>
-          <button className={`text-lg px-5 py-1 rounded-md bg-stone-600 ${quantity === 100 && 'bg-stone-400'}`} onClick={() => setQuantity(100)}>100</button>
+          <button className={`text-lg px-5 py-1 rounded-md hover:bg-stone-500 ${quantity === 1 ? 'bg-stone-400' : 'bg-stone-600'}`} onClick={() => setQuantity(1)}>1</button>
+          <button className={`text-lg px-5 py-1 rounded-md hover:bg-stone-500 ${quantity === 10 ? 'bg-stone-400' : 'bg-stone-600'}`} onClick={() => setQuantity(10)}>10</button>
+          <button className={`text-lg px-5 py-1 rounded-md hover:bg-stone-500 ${quantity === 25 ? 'bg-stone-400' : 'bg-stone-600'}`} onClick={() => setQuantity(25)}>25</button>
+          <button className={`text-lg px-5 py-1 rounded-md hover:bg-stone-500 ${quantity === 50 ? 'bg-stone-400' : 'bg-stone-600'}`} onClick={() => setQuantity(50)}>50</button>
+          <button className={`text-lg px-5 py-1 rounded-md hover:bg-stone-500 ${quantity === 100 ? 'bg-stone-400' : 'bg-stone-600'}`} onClick={() => setQuantity(100)}>100</button>
         </div>
 
         <div className="flex flex-wrap gap-5">
