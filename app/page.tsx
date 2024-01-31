@@ -30,10 +30,10 @@ export default function Home() {
     };
   }, [quacks, nuts, gourdons]);
 
-  let audio = new Audio("/sounds/quack.mp3")
-
+  // let audio = new Audio("/sounds/quack.mp3")
+  const [audio] = useState<HTMLAudioElement | null>(typeof Audio !== 'undefined' ? new Audio("/sounds/quack.mp3") : null)
   const handleClick = (event: any) => {
-    audio.play();
+    audio?.play();
 
     const bigDuck = document.getElementById('bigDuck');
     
